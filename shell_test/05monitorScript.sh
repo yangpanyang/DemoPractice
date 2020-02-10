@@ -7,18 +7,28 @@
 # 5.查看某进程（比如sshd）是否存在，异常则报警；
 # 6.将以上结果写入日志；
 
+# cpu 使用率 阈值
 cpu_boundary=50
+# 内存 使用率 阈值
 memory_boundary=70
+# 磁盘 使用率 阈值
 disk_boundary=20
-net_statu=0
-progress_count=0
+# 网络IP
 network_ip="192.168.100.10"
+# 网络状态
+net_statu=0
+# 进程 名称
 ps_name=sshd
+# 进程 存在的个数
+progress_count=0
 
+# 写入日志目录
 log_path="./log/"
+# 输出日志目录
 log_output_file="output.log"
 log_output_path="$log_path$log_output_file"
 log_output_size=102400
+# 告警日志目录
 log_warning_file="warning.log"
 log_warning_path="$log_path$log_warning_file"
 log_warning_size=102400
