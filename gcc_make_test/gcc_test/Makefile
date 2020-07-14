@@ -4,6 +4,7 @@ cleanall: cleanobj cleanasm
 	rm hello
 
 cleanobj:
+	rm hello.cpp
 	rm hello.o
 	
 cleanasm:

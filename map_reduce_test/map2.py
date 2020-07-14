@@ -15,5 +15,5 @@ if __name__ == '__main__':
             else:
                 wdict[i] += 1
         for j in wdict:
-            print j, wdict[j]
+            print (j, wdict[j])
 
