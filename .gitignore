@@ -1,0 +1,39 @@
+demo/HELP.md
+demo/target/
+demo/!.mvn/wrapper/maven-wrapper.jar
+demo/!**/src/main/**
+demo/!**/src/test/**
+
+### STS ###
+demo/.apt_generated
+demo/.classpath
+demo/.factorypath
+demo/.project
+demo/.settings
+demo/.springBeans
+demo/.sts4-cache
+
+### IntelliJ IDEA ###
+demo/.idea/*
+demo/*.iws
+demo/*.iml
+demo/*.ipr
+
+### NetBeans ###
+demo//nbproject/private/
+demo//nbbuild/
+demo//dist/
+demo//nbdist/
+demo//.nb-gradle/
+demo/build/
+
+### VS Code ###
+demo/.vscode/
+
+demo/*.idea/*
+demo/*.DS_Store
+demo/*target/*
+demo/*logs/
+demo/*.iml
+demo/*Test.java
+demo/c3p0_dev.properties
