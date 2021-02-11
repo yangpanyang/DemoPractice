@@ -1,0 +1,5 @@
+Student:name=Mike,id=S1234,age=16
+Student:name=Jack,id=S1246,age=15
+Student:name=Tom,id=S2312,age=17
+Teacher:name=Ray,id=T0023,subject=Math
+Teacher:name=Lisa,id=T2145,subject=Music

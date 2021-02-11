@@ -16,6 +16,6 @@ public class MyObjectOutputStream extends ObjectOutputStream {
 
     @Override
     protected void writeStreamHeader() throws IOException {
-        return;
+        return;  // 想要连续写数据，第一次读了header，之后不用再读
     }
 }

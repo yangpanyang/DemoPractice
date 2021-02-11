@@ -1,5 +1,6 @@
 {
   "emlpyees": ["Mike", "Jerry", "Tom"],
   "department": "finance",
-  "level": 5
+  "level": 5,
+  "info": {"gender": "male", "class": "z01"}
 }

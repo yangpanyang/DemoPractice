@@ -3,13 +3,18 @@ package com.example.demo;
 import java.io.FileInputStream;
 import java.io.Serializable;
 
+// 序列化的类，Serializable接口本身是空的，提供一个类型信息，供InputStream、OutputStream做进一步处理
 public class EmployeeSerial implements Serializable {
+    // 记录序列化的版本号serialVersionUID，这个值每次可以随机生成，通过这个值识别数据是否与当前的对象匹配
     private static final long serialVersionUID = -76944442204051631L;
 
     private String id;
     private String name;
     private Integer age;
     private Integer salary;
+
+    EmployeeSerial() {
+    }
 
     EmployeeSerial(String id, String name, Integer age, Integer salary) {
         this.id = id;
@@ -26,7 +31,7 @@ public class EmployeeSerial implements Serializable {
         this.id = id;
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
@@ -42,7 +47,7 @@ public class EmployeeSerial implements Serializable {
         this.age = age;
     }
 
-    public Integer getSalary () {
+    public Integer getSalary() {
         return salary;
     }
 

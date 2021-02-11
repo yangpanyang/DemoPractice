@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class ShapeFillColor implements Shape{
+public class ShapeFillColor implements Shape {
     Shape shape;
     String color;
 
@@ -21,6 +21,6 @@ public class ShapeFillColor implements Shape{
 
     @Override
     public String getName() {
-        return "FillColor " + shape.getName();
+        return "FillColor + " + shape.getName();
     }
 }
