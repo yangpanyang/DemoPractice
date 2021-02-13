@@ -1,0 +1,48 @@
+docker image ls
+docker image rm [imageName]
+docker container ls --all
+docker container run -p 8000:3000 -it koa-demo /bin/bash #生成并启动容器
+docker container kill [containerID]
+docker container rm [containerID]
+docker container run --rm -p 8000:3000 -it koa-demo [/bin/bash]  #在容器终止运行后自动删除容器文件
+
+# 把image文件分享到网上，hub.docker.com
+docker image tag [imageName] [username]/[repository]:[tag]
+docker image tag koa-demos:0.0.1 ruanyf/koa-demos:0.0.1
+docker image build -t [username]/[repository]:[tag] .
+docker image push [username]/[repository]:[tag]
+
+docker container start [containerID]
+docker container stop [containerID]
+docker container logs [containerID]
+docker container exec -it [containerID] /bin/bash
+docker container cp [containID]:[/path/to/file] .
+
+
+# Docker基本命令
+docker images
+docker ps  #显示当前运行的container
+docker ps -a  #显示所有的container
+docker stop [containerID]  #关掉container
+docker start [containerID]
+sudo docker network create --driver=bridge hadoop  # 通过桥接的方式，声明子网络
+# 启动 hadoop container (master) 的方式
+sudo docker run -itd \
+                --net=hadoop \
+                -p 50070:50070 \
+                -p 8088:8088 \
+                -p 10000:10000 \
+                -p 9999:9999 \
+                --name hadoop-master \
+                --hostname hadoop-master \
+                -v /Users/sierra/兼职/July/项目/文档推荐系统/new/Data:/opt \
+                kiwenlau/hadoop:1.0 &> /dev/null
+
+-it  # 执行的意思，能够进入容器内部
+-d  # detach，不加就瞬间转移到容器内部去了，退出container就没了；加上会在后台起一个服务，到时候进去就可以了
+--net=hadoop  # 建了个子网络，所有的Hadoop本身是个集群，不是个单点的机器，需要在内部维护一个子网络，hadoop是要事先声明的
+-p  # 端口映射，前面是本地端口，后面是docker端口
+--name  # container的名字，ps可以看到
+--hostname  # docker的hostname
+-v  # 文件映射，把本地文件挂载到docker内，如果本地文件修改而docker未改，需要重新退出docker再进来；但如果本地文件夹被修改了就重新挂载的话需要重新建一个docker
+
